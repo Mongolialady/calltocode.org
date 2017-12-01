@@ -1,3 +1,5 @@
+const mongoose = require('mongoose')
+
 const database = {
   _init (url, client = mongoose) {
     this.url = url
