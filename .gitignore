@@ -5,3 +5,5 @@ dist/
 *.log
 package-lock.json
 npm-shrinkwrap.json
+reports/
+bin/
