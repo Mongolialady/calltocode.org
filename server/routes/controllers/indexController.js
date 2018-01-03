@@ -1,10 +1,12 @@
 const path = require('path')
 
+const bindFunctions = require('../../bindFunctions')
+
 const indexController = {
   _init (pathResolver = path) {
-    this.indexFilePath = pathResolver.join(__dirname, '..', '..', '..', 'client', 'dist', 'index.html')
+    bindFunctions(this)
 
-    this.getIndexPage = this.getIndexPage.bind(this)
+    this.indexFilePath = pathResolver.join(__dirname, '..', '..', '..', 'client', 'dist', 'index.html')
     return this
   },
 

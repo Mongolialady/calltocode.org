@@ -1,11 +1,11 @@
+const bindFunctions = require('../../bindFunctions')
 const UserModel = require('../../database/models/User')
 
 const userController = {
   _init (Users = UserModel) {
-    this.Users = Users
+    bindFunctions(this)
 
-    this.getCurrent = this.getCurrent.bind(this)
-    this.putCurrent = this.putCurrent.bind(this)
+    this.Users = Users
     return this
   },
 
